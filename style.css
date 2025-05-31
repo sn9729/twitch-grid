@@ -256,3 +256,15 @@ iframe {
         height: 200px;
     }
 }
+@media (min-width: 1024px) {
+    iframe {
+        height: 380px;
+    }
+}
+
+@media (max-width: 768px) {
+    iframe {
+        height: 220px;
+    }
+}
+
