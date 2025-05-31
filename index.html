@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TwitchGrid - Professional Multi-Stream Viewer</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">TwitchGrid</div>
+            <div class="auth-section">
+                <div id="user-info" class="user-info hidden">
+                    <img id="user-avatar" class="avatar" src="" alt="User Avatar" />
+                    <span id="user-name"></span>
+                    <button class="btn btn-secondary" onclick="logout()">Logout</button>
+                </div>
+                <button id="login-btn" class="btn" onclick="loginWithTwitch()">
+                    🎮 Login with Twitch
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="welcome-section">
+            <h1>Watch Multiple Streams Simultaneously</h1>
+            <p>The ultimate multi-stream experience for Twitch viewers</p>
+        </section>
+        <div id="login-prompt" class="login-prompt">
+            <h2>🎮 Connect Your Twitch Account</h2>
+            <p>Login with Twitch to access personalized features and enjoy the best multi-stream experience.</p>
+            <button class="btn" onclick="loginWithTwitch()" style="margin-top: 1rem;">
+                Login with Twitch
+            </button>
+        </div>
+
+        <div id="app-content" class="hidden">
+            <section class="streamer-selection">
+                <h2>🎯 Choose Your Streamers</h2>
+                <p style="color: #cbd5e1; margin-bottom: 1.5rem;">Enter the usernames of up to 4 streamers you want to watch</p>
+                
+                <div class="streamer-inputs">
+                    <div class="input-group">
+                        <label for="streamer1">Streamer 1</label>
+                        <input type="text" id="streamer1" class="streamer-input" placeholder="e.g., xqcow" />
+                    </div>
+                    <div class="input-group">
+                        <label for="streamer2">Streamer 2</label>
+                        <input type="text" id="streamer2" class="streamer-input" placeholder="e.g., shroud" />
+                    </div>
+                    <div class="input-group">
+                        <label for="streamer3">Streamer 3</label>
+                        <input type="text" id="streamer3" class="streamer-input" placeholder="e.g., pokimane" />
+                    </div>
+                    <div class="input-group">
+                        <label for="streamer4">Streamer 4</label>
+                        <input type="text" id="streamer4" class="streamer-input" placeholder="e.g., hasanabi" />
+                    </div>
+                </div>
+
+                <button class="btn" onclick="loadStreams()">
+                    🚀 Load Streams
+                </button>
+            </section>
+
+            <div id="error-container"></div>
+            <div id="loading" class="loading hidden">
+                <h3>🔄 Loading streams...</h3>
+            </div>
+
+            <div id="stream-grid" class="stream-grid"></div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
