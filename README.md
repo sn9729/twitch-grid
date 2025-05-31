@@ -67,18 +67,6 @@ Then open your browser and go to: [http://localhost:3000](http://localhost:3000)
 
 ---
 
-## 📁 File Structure
-
-```
-twitch-grid/
-├── index.html
-├── style.css
-├── script.js
-└── README.md
-```
-
----
-
 ## 📄 License
 
 This project is licensed under the **MIT License**.
